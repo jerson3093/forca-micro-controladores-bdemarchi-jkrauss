@@ -1,5 +1,6 @@
 main
 	__CC2DW
+	strcpy
 	UART1_Init
 	UART1_Write_Text
 		UART1_Write

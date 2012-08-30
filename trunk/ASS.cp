@@ -1,12 +1,14 @@
-#line 1 "C:/Documents and Settings/jrkrauss/Meus documentos/AQUI/ASS/ASS.c"
+#line 1 "C:/Documents and Settings/bdemarchi/Desktop/ASS/forca-micro-controladores-bdemarchi-jkrauss/ASS.c"
 char uart_rd;
 char texto[31];
+char tracos[31];
 char enter[2];
 
 void main() {
 
  enter[0]=13;
  enter[1]=0;
+ strcpy(tracos,"------------------------------");
 
  UART1_Init(9600);
  Delay_ms(100);
