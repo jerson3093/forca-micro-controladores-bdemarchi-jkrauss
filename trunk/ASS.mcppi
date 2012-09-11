@@ -24,14 +24,17 @@ File0=ASS.c
 [OTHER_FILES]
 Count=0
 [SEARCH_PATH]
-Count=7
-Path0=C:\Documents and Settings\bdemarchi\Desktop\mikroC PRO for PIC\defs\
-Path1=C:\Documents and Settings\bdemarchi\Desktop\mikroC PRO for PIC\uses\P18\
-Path2=C:\Documents and Settings\bdemarchi\Desktop\ASS\forca-micro-controladores-bdemarchi-jkrauss\
-Path3=C:\Documents and Settings\bdemarchi\Desktop\ASS\
-Path4=C:\Documents and Settings\jrkrauss\Meus documentos\Downloads\mikroC PRO for PIC\defs\
-Path5=C:\Documents and Settings\jrkrauss\Meus documentos\Downloads\mikroC PRO for PIC\uses\P18\
-Path6=C:\Documents and Settings\jrkrauss\Meus documentos\AQUI\ASS\
+Count=10
+Path0=C:\Facool\8o semestre\Microcontroladores\mikroC PRO for PIC\defs\
+Path1=C:\Facool\8o semestre\Microcontroladores\mikroC PRO for PIC\uses\P18\
+Path2=C:\Facool\8o semestre\Microcontroladores\Trabalho Jogo da Forca\
+Path3=C:\Documents and Settings\bdemarchi\Desktop\mikroC PRO for PIC\defs\
+Path4=C:\Documents and Settings\bdemarchi\Desktop\mikroC PRO for PIC\uses\P18\
+Path5=C:\Documents and Settings\bdemarchi\Desktop\ASS\forca-micro-controladores-bdemarchi-jkrauss\
+Path6=C:\Documents and Settings\bdemarchi\Desktop\ASS\
+Path7=C:\Documents and Settings\jrkrauss\Meus documentos\Downloads\mikroC PRO for PIC\defs\
+Path8=C:\Documents and Settings\jrkrauss\Meus documentos\Downloads\mikroC PRO for PIC\uses\P18\
+Path9=C:\Documents and Settings\jrkrauss\Meus documentos\AQUI\ASS\
 [HEADER_PATH]
 Count=0
 [HEADERS]

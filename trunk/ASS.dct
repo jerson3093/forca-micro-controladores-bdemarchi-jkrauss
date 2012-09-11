@@ -622,6 +622,8 @@ lcd_out
 lcd_out_cp
 ldexp
 ldiv
+letras1
+letras2
 log
 log10
 longint2double
@@ -736,6 +738,7 @@ ow_reset
 ow_write
 p
 p_bit
+palavra
 pcfg0
 pcfg0_bit
 pcfg1
@@ -1268,7 +1271,7 @@ tblptru3
 tblptru3_bit
 tblptru4
 tblptru4_bit
-texto
+teste
 time_datetoepoch
 time_epochtodate
 time_jd1970
@@ -1330,7 +1333,6 @@ toutps2
 toutps2_bit
 toutps3
 toutps3_bit
-tracos
 trisa
 trisa0
 trisa0_bit

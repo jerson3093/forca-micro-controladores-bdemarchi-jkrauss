@@ -1,12 +1,12 @@
 main
 	__CC2DW
-	strcpy
 	UART1_Init
 	UART1_Write_Text
 		UART1_Write
-	UART1_Write
 	UART1_Read_Text
 		UART1_Data_Ready
 		UART1_Read
-	UART1_Data_Ready
-	UART1_Read
+	strstr
+		strlen
+		strncmp
+		strchr
