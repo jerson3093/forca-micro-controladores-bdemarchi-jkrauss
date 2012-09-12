@@ -271,19 +271,25 @@ L_main8:
 L__main12:
 	BTFSS       STATUS+0, 2 
 	GOTO        L_main10
-;ASS.c,67 :: 		UART1_Write_Text("VOCE VENCEU!");
+;ASS.c,67 :: 		UART1_Write_Text("VOCE VENCEU! A PALAVRA ERA ");
 	MOVLW       ?lstr9_ASS+0
 	MOVWF       FARG_UART1_Write_Text_uart_text+0 
 	MOVLW       hi_addr(?lstr9_ASS+0)
 	MOVWF       FARG_UART1_Write_Text_uart_text+1 
 	CALL        _UART1_Write_Text+0, 0
-;ASS.c,68 :: 		break;
+;ASS.c,68 :: 		UART1_Write_Text(palavra);
+	MOVLW       _palavra+0
+	MOVWF       FARG_UART1_Write_Text_uart_text+0 
+	MOVLW       hi_addr(_palavra+0)
+	MOVWF       FARG_UART1_Write_Text_uart_text+1 
+	CALL        _UART1_Write_Text+0, 0
+;ASS.c,69 :: 		break;
 	GOTO        L_main2
-;ASS.c,69 :: 		}
-L_main10:
 ;ASS.c,70 :: 		}
+L_main10:
+;ASS.c,71 :: 		}
 	GOTO        L_main1
 L_main2:
-;ASS.c,71 :: 		}
+;ASS.c,72 :: 		}
 	GOTO        $+0
 ; end of _main
