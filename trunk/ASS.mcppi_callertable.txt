@@ -57,6 +57,7 @@ main
 						SETFUN32
 				Double2Longint
 					SETIOV3224
+		UART1_Write
 		UART1_Write_Text
 			UART1_Write
 	UART1_Read_Text

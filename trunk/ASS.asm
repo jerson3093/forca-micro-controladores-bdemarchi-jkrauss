@@ -2,6 +2,10 @@
 _imprimeEstadoAtual:
 
 ;ASS.c,12 :: 		void imprimeEstadoAtual() {
+;ASS.c,13 :: 		UART1_Write(12);
+	MOVLW       12
+	MOVWF       FARG_UART1_Write_data_+0 
+	CALL        _UART1_Write+0, 0
 ;ASS.c,15 :: 		sprintf(tentativasChar,"%d",tentativas);
 	MOVLW       _tentativasChar+0
 	MOVWF       FARG_sprintf_wh+0 
@@ -243,6 +247,8 @@ L_main7:
 	IORWF       _tentativas+1, 0 
 	BTFSS       STATUS+0, 2 
 	GOTO        L_main8
+;ASS.c,62 :: 		imprimeEstadoAtual();
+	CALL        _imprimeEstadoAtual+0, 0
 ;ASS.c,63 :: 		UART1_Write_Text("GAME OVER");
 	MOVLW       ?lstr7_ASS+0
 	MOVWF       FARG_UART1_Write_Text_uart_text+0 
@@ -271,25 +277,25 @@ L_main8:
 L__main12:
 	BTFSS       STATUS+0, 2 
 	GOTO        L_main10
-;ASS.c,67 :: 		UART1_Write_Text("VOCE VENCEU! A PALAVRA ERA ");
+;ASS.c,66 :: 		UART1_Write_Text("VOCE VENCEU! A PALAVRA ERA ");
 	MOVLW       ?lstr9_ASS+0
 	MOVWF       FARG_UART1_Write_Text_uart_text+0 
 	MOVLW       hi_addr(?lstr9_ASS+0)
 	MOVWF       FARG_UART1_Write_Text_uart_text+1 
 	CALL        _UART1_Write_Text+0, 0
-;ASS.c,68 :: 		UART1_Write_Text(palavra);
+;ASS.c,67 :: 		UART1_Write_Text(palavra);
 	MOVLW       _palavra+0
 	MOVWF       FARG_UART1_Write_Text_uart_text+0 
 	MOVLW       hi_addr(_palavra+0)
 	MOVWF       FARG_UART1_Write_Text_uart_text+1 
 	CALL        _UART1_Write_Text+0, 0
-;ASS.c,69 :: 		break;
+;ASS.c,68 :: 		break;
 	GOTO        L_main2
-;ASS.c,70 :: 		}
+;ASS.c,69 :: 		}
 L_main10:
-;ASS.c,71 :: 		}
+;ASS.c,70 :: 		}
 	GOTO        L_main1
 L_main2:
-;ASS.c,72 :: 		}
+;ASS.c,71 :: 		}
 	GOTO        $+0
 ; end of _main

@@ -1,4 +1,4 @@
-#line 1 "C:/Users/tecbmbkd/Desktop/facool/micro/forca/ASS.c"
+#line 1 "C:/Documents and Settings/bdemarchi/Desktop/Nova pasta/ASS.c"
 char enter[2];
 char entrada[2];
 char palavra[] = "PARALELEPIPEDO";
@@ -11,7 +11,7 @@ int i;
 int encontrou;
 
 void imprimeEstadoAtual() {
-
+ UART1_Write(12);
 
  sprintf(tentativasChar,"%d",tentativas);
 
@@ -60,11 +60,10 @@ void main() {
  }
 
  if(!tentativas) {
-
+ imprimeEstadoAtual();
  UART1_Write_Text("GAME OVER");
  break;
  } else if(strstr(escondida,"_") == 0) {
-
  UART1_Write_Text("VOCE VENCEU! A PALAVRA ERA ");
  UART1_Write_Text(palavra);
  break;
