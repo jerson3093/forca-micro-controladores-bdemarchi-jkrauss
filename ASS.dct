@@ -1277,6 +1277,7 @@ tblptru3_bit
 tblptru4
 tblptru4_bit
 tentativas
+tentativaschar
 time_datetoepoch
 time_epochtodate
 time_jd1970
@@ -1433,7 +1434,6 @@ txreg
 txsta
 ua
 ua_bit
-uart_rd
 uart_rd_ptr
 uart_rdy_ptr
 uart_set_active
