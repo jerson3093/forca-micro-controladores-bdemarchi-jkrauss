@@ -51,6 +51,7 @@ void main() {
 		if(palavra[i] == entrada[0]) {
 			escondida[i] = entrada[0];
 			encontrou = 1;
+			break;
 		}
 	}
 	
