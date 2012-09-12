@@ -11,14 +11,14 @@ warning: 0	1501	Specified search path does not exist: 'C:\Documents and Settings
 warning: 0	1501	Specified search path does not exist: 'C:\Documents and Settings\jrkrauss\Meus documentos\Downloads\mikroC PRO for PIC\uses\P18'	 
 warning: 0	1501	Specified search path does not exist: 'C:\Documents and Settings\jrkrauss\Meus documentos\AQUI\ASS'	 
 hint: 0	1138	Available RAM: 1515 [bytes], Available ROM: 32768 [bytes]	 
-diagnostics: 0	126	All files Preprocessed in 32 ms	 
+diagnostics: 0	126	All files Preprocessed in 46 ms	 
 diagnostics: 0	122	Compilation Started	ASS.c
 warning: 41	1509	Generated baud rate is 9615 bps (error = 0.16 percent)	ASS.c
-diagnostics: 71	123	Compiled Successfully	ASS.c
-diagnostics: 0	127	All files Compiled in 327 ms	 
-hint: 0	1143	Used RAM (bytes): 271 (18%)  Free RAM (bytes): 1244 (82%)	Used RAM (bytes): 271 (18%)  Free RAM (bytes): 1244 (82%)
-hint: 0	1143	Used ROM (bytes): 17074 (52%)  Free ROM (bytes): 15694 (48%)	Used ROM (bytes): 17074 (52%)  Free ROM (bytes): 15694 (48%)
+diagnostics: 72	123	Compiled Successfully	ASS.c
+diagnostics: 0	127	All files Compiled in 546 ms	 
+hint: 0	1143	Used RAM (bytes): 300 (20%)  Free RAM (bytes): 1215 (80%)	Used RAM (bytes): 300 (20%)  Free RAM (bytes): 1215 (80%)
+hint: 0	1143	Used ROM (bytes): 16763 (51%)  Free ROM (bytes): 16005 (49%)	Used ROM (bytes): 16763 (51%)  Free ROM (bytes): 16005 (49%)
 diagnostics: 0	125	Project Linked Successfully	ASS.mcppi
-diagnostics: 0	128	Linked in 2184 ms	 
-diagnostics: 0	129	Project 'ASS.mcppi' completed: 3276 ms	 
-diagnostics: 0	103	Finished successfully: 12 set 2012, 10:07:47	ASS.mcppi
+diagnostics: 0	128	Linked in 1826 ms	 
+diagnostics: 0	129	Project 'ASS.mcppi' completed: 3183 ms	 
+diagnostics: 0	103	Finished successfully: 12 set 2012, 10:19:25	ASS.mcppi

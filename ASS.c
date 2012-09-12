@@ -1,9 +1,9 @@
 char enter[2];
 char entrada[2];
-char palavra[] = "DEMONIO";
-char escondida[] = "_______";
-char letras1[] = "EAQODI";
-char letras2[] = "ONZMYK";
+char palavra[] = "PARALELEPIPEDO";
+char escondida[] = "______________";
+char letras1[] = "EJPHRA";
+char letras2[] = "LMIDNO";
 int tentativas = 5;
 char tentativasChar[2];
 int i;
@@ -50,8 +50,7 @@ void main() {
 	for(i=0; i < strlen(palavra); i++) {		
 		if(palavra[i] == entrada[0]) {
 			escondida[i] = entrada[0];
-			encontrou = 1;
-			break;
+			encontrou = 1;			
 		}
 	}
 	
@@ -65,7 +64,8 @@ void main() {
 		break;
 	} else if(strstr(escondida,"_") == 0) {
 		//TODO - limpar tela
-		UART1_Write_Text("VOCE VENCEU!");
+		UART1_Write_Text("VOCE VENCEU! A PALAVRA ERA ");
+		UART1_Write_Text(palavra);
 		break;
 	}
   }
