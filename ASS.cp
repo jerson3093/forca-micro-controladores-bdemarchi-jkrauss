@@ -1,5 +1,4 @@
 #line 1 "C:/Facool/8o semestre/Microcontroladores/Trabalho Jogo da Forca/ASS.c"
-
 char uart_rd;
 char enter[2];
 char teste[2];
@@ -34,7 +33,7 @@ void main() {
  while (1) {
  UART1_Read_Text(teste, enter, 2);
  UART1_Write_Text(teste);
- if(strstr(palavra, teste) ==  ((void*)0) ) {
+ if(strstr(palavra, teste) == 0) {
  UART1_Write_Text(" errado");
  } else {
  UART1_Write_Text(" correto");
