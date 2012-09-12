@@ -10,8 +10,8 @@ int i;
 int encontrou;
 
 void imprimeEstadoAtual() {
-  //TODO - limpar tela
-  
+  UART1_Write(12);
+
   sprintf(tentativasChar,"%d",tentativas);
   
   UART1_Write_Text("JOGO DA FORCA - 1.0");
@@ -42,31 +42,30 @@ void main() {
   Delay_ms(100);                 // Wait for UART module to stabilize
  
   while (1) {
-	encontrou = 0;
+    encontrou = 0;
     imprimeEstadoAtual();
          
     UART1_Read_Text(entrada, enter, 2);
-	
-	for(i=0; i < strlen(palavra); i++) {		
-		if(palavra[i] == entrada[0]) {
-			escondida[i] = entrada[0];
-			encontrou = 1;			
-		}
-	}
-	
-	if(!encontrou) {
-		tentativas--;
-	}
-	
-	if(!tentativas) {
-		//TODO - limpar tela
-		UART1_Write_Text("GAME OVER");
-		break;
-	} else if(strstr(escondida,"_") == 0) {
-		//TODO - limpar tela
-		UART1_Write_Text("VOCE VENCEU! A PALAVRA ERA ");
-		UART1_Write_Text(palavra);
-		break;
-	}
+        
+        for(i=0; i < strlen(palavra); i++) {                
+                if(palavra[i] == entrada[0]) {
+                        escondida[i] = entrada[0];
+                        encontrou = 1;                        
+                }
+        }
+        
+        if(!encontrou) {
+                tentativas--;
+        }
+        
+        if(!tentativas) {
+                imprimeEstadoAtual();
+                UART1_Write_Text("GAME OVER");
+                break;
+        } else if(strstr(escondida,"_") == 0) {
+                UART1_Write_Text("VOCE VENCEU! A PALAVRA ERA ");
+                UART1_Write_Text(palavra);
+                break;
+        }
   }
 }
