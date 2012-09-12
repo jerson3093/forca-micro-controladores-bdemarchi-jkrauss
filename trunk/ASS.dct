@@ -379,8 +379,11 @@ eepgd
 eepgd_bit
 eeprom_read
 eeprom_write
+encontrou
 enter
+entrada
 equals_double
+escondida
 exp
 expander_init
 expander_init_advanced
@@ -465,6 +468,7 @@ go_bit
 go_done
 go_done_bit
 halfbits
+i
 i2c_dat
 i2c_dat_bit
 i2c_read
@@ -486,6 +490,7 @@ ibf_trise_bit
 ibov
 ibov_bit
 ibov_trise_bit
+imprimeestadoatual
 indf0
 indf1
 indf2
@@ -1271,7 +1276,7 @@ tblptru3
 tblptru3_bit
 tblptru4
 tblptru4_bit
-teste
+tentativas
 time_datetoepoch
 time_epochtodate
 time_jd1970
