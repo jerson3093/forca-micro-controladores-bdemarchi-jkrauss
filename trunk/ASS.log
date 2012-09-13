@@ -1,5 +1,8 @@
 Line	MessageNo	File Name
-0	1	mikroCPIC1618.exe -MSF -DBG -pP18F452 -DL -O11111114 -fo8 -N"C:\Documents and Settings\bdemarchi\Desktop\Nova pasta\ASS.mcppi" -SP"C:\Documents and Settings\bdemarchi\Desktop\mikroC PRO for PIC\defs\" -SP"C:\Documents and Settings\bdemarchi\Desktop\mikroC PRO for PIC\uses\P18\" -SP"C:\Documents and Settings\bdemarchi\Desktop\Nova pasta\" -SP"C:\Users\tecbmbkd\Desktop\facool\micro\mikroC PRO for PIC\defs\" -SP"C:\Users\tecbmbkd\Desktop\facool\micro\mikroC PRO for PIC\uses\P18\" -SP"C:\Users\tecbmbkd\Desktop\facool\micro\forca\" -SP"C:\Facool\8o semestre\Microcontroladores\mikroC PRO for PIC\defs\" -SP"C:\Facool\8o semestre\Microcontroladores\mikroC PRO for PIC\uses\P18\" -SP"C:\Facool\8o semestre\Microcontroladores\Trabalho Jogo da Forca\" -SP"C:\Documents and Settings\bdemarchi\Desktop\ASS\forca-micro-controladores-bdemarchi-jkrauss\" -SP"C:\Documents and Settings\bdemarchi\Desktop\ASS\" -SP"C:\Documents and Settings\jrkrauss\Meus documentos\Downloads\mikroC PRO for PIC\defs\" -SP"C:\Documents and Settings\jrkrauss\Meus documentos\Downloads\mikroC PRO for PIC\uses\P18\" -SP"C:\Documents and Settings\jrkrauss\Meus documentos\AQUI\ASS\" "ASS.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_CType.mcl" "__Lib_CString.mcl" "__Lib_CStdlib.mcl" "__Lib_CMath.mcl" "__Lib_Conversions.mcl" "__Lib_Sprintf.mcl" "__Lib_PrintOut.mcl" "__Lib_Sprinti.mcl" "__Lib_Sprintl.mcl" "__Lib_Time.mcl" "__Lib_Trigonometry.mcl" "__Lib_Button.mcl" "__Lib_Keypad4x4.mcl" "__Lib_Manchester.mcl" "__Lib_OneWire.mcl" "__Lib_PS2.mcl" "__Lib_Sound.mcl" "__Lib_SoftI2C.mcl" "__Lib_SoftSPI.mcl" "__Lib_SoftUART.mcl" "__Lib_ADC_A_C.mcl" "__Lib_EEPROM_256.mcl" "__Lib_FLASH_w8_e64.mcl" "__Lib_I2C_c34.mcl" "__Lib_PWM_c21.mcl" "__Lib_SPI_c345.mcl" "__Lib_UART_c67.mcl" "__Lib_PortExpander.mcl" "__Lib_CANSPI.mcl" "__Lib_CF.mcl" "__Lib_CFFat16.mcl" "__Lib_GlcdFonts.mcl" "__Lib_Glcd.mcl" "__Lib_LcdConsts.mcl" "__Lib_Lcd.mcl" "__Lib_Mmc.mcl" "__Lib_MmcFat16.mcl" "__Lib_RS485.mcl" "__Lib_T6963C.mcl" "__Lib_SPIGlcd.mcl" "__Lib_SPILcd.mcl" "__Lib_SPILcd8.mcl" "__Lib_SPIT6963C.mcl" "__Lib_EthEnc28j60.mcl"	 
+0	1	mikroCPIC1618.exe -MSF -DBG -pP18F452 -DL -O11111114 -fo8 -N"C:\Documents and Settings\jrkrauss\Meus documentos\Downloads\COCO_PISADO\ASS.mcppi" -SP"C:\Documents and Settings\jrkrauss\Meus documentos\Downloads\mikroC PRO for PIC\defs\" -SP"C:\Documents and Settings\jrkrauss\Meus documentos\Downloads\mikroC PRO for PIC\uses\P18\" -SP"C:\Documents and Settings\jrkrauss\Meus documentos\Downloads\COCO_PISADO\" -SP"C:\Documents and Settings\bdemarchi\Desktop\mikroC PRO for PIC\defs\" -SP"C:\Documents and Settings\bdemarchi\Desktop\mikroC PRO for PIC\uses\P18\" -SP"C:\Documents and Settings\bdemarchi\Desktop\Nova pasta\" -SP"C:\Users\tecbmbkd\Desktop\facool\micro\mikroC PRO for PIC\defs\" -SP"C:\Users\tecbmbkd\Desktop\facool\micro\mikroC PRO for PIC\uses\P18\" -SP"C:\Users\tecbmbkd\Desktop\facool\micro\forca\" -SP"C:\Facool\8o semestre\Microcontroladores\mikroC PRO for PIC\defs\" -SP"C:\Facool\8o semestre\Microcontroladores\mikroC PRO for PIC\uses\P18\" -SP"C:\Facool\8o semestre\Microcontroladores\Trabalho Jogo da Forca\" -SP"C:\Documents and Settings\bdemarchi\Desktop\ASS\forca-micro-controladores-bdemarchi-jkrauss\" -SP"C:\Documents and Settings\bdemarchi\Desktop\ASS\" -SP"C:\Documents and Settings\jrkrauss\Meus documentos\AQUI\ASS\" "ASS.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_CType.mcl" "__Lib_CString.mcl" "__Lib_CStdlib.mcl" "__Lib_CMath.mcl" "__Lib_Conversions.mcl" "__Lib_Sprintf.mcl" "__Lib_PrintOut.mcl" "__Lib_Sprinti.mcl" "__Lib_Sprintl.mcl" "__Lib_Time.mcl" "__Lib_Trigonometry.mcl" "__Lib_Button.mcl" "__Lib_Keypad4x4.mcl" "__Lib_Manchester.mcl" "__Lib_OneWire.mcl" "__Lib_PS2.mcl" "__Lib_Sound.mcl" "__Lib_SoftI2C.mcl" "__Lib_SoftSPI.mcl" "__Lib_SoftUART.mcl" "__Lib_ADC_A_C.mcl" "__Lib_EEPROM_256.mcl" "__Lib_FLASH_w8_e64.mcl" "__Lib_I2C_c34.mcl" "__Lib_PWM_c21.mcl" "__Lib_SPI_c345.mcl" "__Lib_UART_c67.mcl" "__Lib_PortExpander.mcl" "__Lib_CANSPI.mcl" "__Lib_CF.mcl" "__Lib_CFFat16.mcl" "__Lib_GlcdFonts.mcl" "__Lib_Glcd.mcl" "__Lib_LcdConsts.mcl" "__Lib_Lcd.mcl" "__Lib_Mmc.mcl" "__Lib_MmcFat16.mcl" "__Lib_RS485.mcl" "__Lib_T6963C.mcl" "__Lib_SPIGlcd.mcl" "__Lib_SPILcd.mcl" "__Lib_SPILcd8.mcl" "__Lib_SPIT6963C.mcl" "__Lib_EthEnc28j60.mcl"	 
+warning: 0	1501	Specified search path does not exist: 'C:\Documents and Settings\bdemarchi\Desktop\mikroC PRO for PIC\defs'	 
+warning: 0	1501	Specified search path does not exist: 'C:\Documents and Settings\bdemarchi\Desktop\mikroC PRO for PIC\uses\P18'	 
+warning: 0	1501	Specified search path does not exist: 'C:\Documents and Settings\bdemarchi\Desktop\Nova pasta'	 
 warning: 0	1501	Specified search path does not exist: 'C:\Users\tecbmbkd\Desktop\facool\micro\mikroC PRO for PIC\defs'	 
 warning: 0	1501	Specified search path does not exist: 'C:\Users\tecbmbkd\Desktop\facool\micro\mikroC PRO for PIC\uses\P18'	 
 warning: 0	1501	Specified search path does not exist: 'C:\Users\tecbmbkd\Desktop\facool\micro\forca'	 
@@ -8,18 +11,16 @@ warning: 0	1501	Specified search path does not exist: 'C:\Facool\8o semestre\Mic
 warning: 0	1501	Specified search path does not exist: 'C:\Facool\8o semestre\Microcontroladores\Trabalho Jogo da Forca'	 
 warning: 0	1501	Specified search path does not exist: 'C:\Documents and Settings\bdemarchi\Desktop\ASS\forca-micro-controladores-bdemarchi-jkrauss'	 
 warning: 0	1501	Specified search path does not exist: 'C:\Documents and Settings\bdemarchi\Desktop\ASS'	 
-warning: 0	1501	Specified search path does not exist: 'C:\Documents and Settings\jrkrauss\Meus documentos\Downloads\mikroC PRO for PIC\defs'	 
-warning: 0	1501	Specified search path does not exist: 'C:\Documents and Settings\jrkrauss\Meus documentos\Downloads\mikroC PRO for PIC\uses\P18'	 
 warning: 0	1501	Specified search path does not exist: 'C:\Documents and Settings\jrkrauss\Meus documentos\AQUI\ASS'	 
 hint: 0	1138	Available RAM: 1515 [bytes], Available ROM: 32768 [bytes]	 
-diagnostics: 0	126	All files Preprocessed in 15 ms	 
+diagnostics: 0	126	All files Preprocessed in 1 ms	 
 diagnostics: 0	122	Compilation Started	ASS.c
-warning: 41	1509	Generated baud rate is 9615 bps (error = 0.16 percent)	ASS.c
-diagnostics: 71	123	Compiled Successfully	ASS.c
-diagnostics: 0	127	All files Compiled in 78 ms	 
-hint: 0	1143	Used RAM (bytes): 300 (20%)  Free RAM (bytes): 1215 (80%)	Used RAM (bytes): 300 (20%)  Free RAM (bytes): 1215 (80%)
-hint: 0	1143	Used ROM (bytes): 16771 (51%)  Free ROM (bytes): 15997 (49%)	Used ROM (bytes): 16771 (51%)  Free ROM (bytes): 15997 (49%)
+warning: 47	1509	Generated baud rate is 9615 bps (error = 0.16 percent)	ASS.c
+diagnostics: 100	123	Compiled Successfully	ASS.c
+diagnostics: 0	127	All files Compiled in 94 ms	 
+hint: 0	1143	Used RAM (bytes): 319 (21%)  Free RAM (bytes): 1196 (79%)	Used RAM (bytes): 319 (21%)  Free RAM (bytes): 1196 (79%)
+hint: 0	1143	Used ROM (bytes): 17174 (52%)  Free ROM (bytes): 15594 (48%)	Used ROM (bytes): 17174 (52%)  Free ROM (bytes): 15594 (48%)
 diagnostics: 0	125	Project Linked Successfully	ASS.mcppi
-diagnostics: 0	128	Linked in 1000 ms	 
-diagnostics: 0	129	Project 'ASS.mcppi' completed: 1453 ms	 
-diagnostics: 0	103	Finished successfully: 12 set 2012, 20:03:25	ASS.mcppi
+diagnostics: 0	128	Linked in 984 ms	 
+diagnostics: 0	129	Project 'ASS.mcppi' completed: 1422 ms	 
+diagnostics: 0	103	Finished successfully: 12 set 2012, 21:02:13	ASS.mcppi
