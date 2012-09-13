@@ -1,11 +1,14 @@
-#line 1 "C:/Documents and Settings/bdemarchi/Desktop/Nova pasta/ASS.c"
+#line 1 "C:/Documents and Settings/jrkrauss/Meus documentos/Downloads/COCO_PISADO/ASS.c"
 char enter[2];
 char entrada[2];
 char palavra[] = "PARALELEPIPEDO";
 char escondida[] = "______________";
-char letras1[] = "EJPHRA";
-char letras2[] = "LMIDNO";
-int tentativas = 5;
+char cabeca[] = " V";
+char tronco[] = "/|\\";
+char barriga[] = " |";
+char perna[] = "/ \\";
+int tentativas = 4;
+
 char tentativasChar[2];
 int i;
 int encontrou;
@@ -18,11 +21,14 @@ void imprimeEstadoAtual() {
  UART1_Write_Text("JOGO DA FORCA - 1.0");
  UART1_Write_Text(enter);
  UART1_Write_Text(enter);
- UART1_Write_Text("Letras:");
+ UART1_Write_Text(cabeca);
  UART1_Write_Text(enter);
- UART1_Write_Text(letras1);
+ UART1_Write_Text(tronco);
  UART1_Write_Text(enter);
- UART1_Write_Text(letras2);
+ UART1_Write_Text(barriga);
+ UART1_Write_Text(enter);
+ UART1_Write_Text(perna);
+ UART1_Write_Text(enter);
  UART1_Write_Text(enter);
  UART1_Write_Text("----------------------------------");
  UART1_Write_Text(enter);
@@ -42,6 +48,16 @@ void main() {
  UART1_Init(9600);
  Delay_ms(100);
 
+ UART1_Write_Text("Digite a palavra: ");
+ UART1_Write_Text(enter);
+ UART1_Read_Text(palavra, enter, 20);
+ UART1_Write_Text(enter);
+
+ for(i=0; i < strlen(palavra); i++) {
+ escondida[i] = 95;
+ }
+ escondida[strlen(palavra)]=0;
+
  while (1) {
  encontrou = 0;
  imprimeEstadoAtual();
@@ -57,6 +73,18 @@ void main() {
 
  if(!encontrou) {
  tentativas--;
+ if(tentativas == 3){
+ strcpy(perna," ");
+ }
+ if(tentativas == 2){
+ strcpy(barriga," ");
+ }
+ if(tentativas == 1){
+ strcpy(tronco," ");
+ }
+ if(tentativas == 0){
+ strcpy(cabeca," ");
+ }
  }
 
  if(!tentativas) {
@@ -64,6 +92,7 @@ void main() {
  UART1_Write_Text("GAME OVER");
  break;
  } else if(strstr(escondida,"_") == 0) {
+ imprimeEstadoAtual();
  UART1_Write_Text("VOCE VENCEU! A PALAVRA ERA ");
  UART1_Write_Text(palavra);
  break;

@@ -200,6 +200,7 @@ b5
 b6
 b7
 banked
+barriga
 bcd2dec16
 bclie
 bclie_bit
@@ -219,6 +220,7 @@ byte2double
 bytetostr
 c
 c_bit
+cabeca
 canspigetoperationmode
 canspiinitialize
 canspiread
@@ -627,8 +629,6 @@ lcd_out
 lcd_out_cp
 ldexp
 ldiv
-letras1
-letras2
 log
 log10
 longint2double
@@ -771,6 +771,7 @@ peie
 peie_bit
 pen
 pen_bit
+perna
 pie1
 pie2
 pir1
@@ -1414,6 +1415,7 @@ trise2
 trise2_bit
 trmt
 trmt_bit
+tronco
 tx8_9
 tx8_9_bit
 tx9
