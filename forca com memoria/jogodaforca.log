@@ -6,12 +6,12 @@ warning: 0	1501	Specified search path does not exist: 'C:\Documents and Settings
 hint: 0	1138	Available RAM: 1515 [bytes], Available ROM: 32768 [bytes]	 
 diagnostics: 0	126	All files Preprocessed in 1 ms	 
 diagnostics: 0	122	Compilation Started	jogodaforca.c
-warning: 186	1509	Generated baud rate is 9615 bps (error = 0.16 percent)	jogodaforca.c
-diagnostics: 213	123	Compiled Successfully	jogodaforca.c
-diagnostics: 0	127	All files Compiled in 172 ms	 
-hint: 0	1143	Used RAM (bytes): 447 (30%)  Free RAM (bytes): 1068 (70%)	Used RAM (bytes): 447 (30%)  Free RAM (bytes): 1068 (70%)
-hint: 0	1143	Used ROM (bytes): 18486 (56%)  Free ROM (bytes): 14282 (44%)	Used ROM (bytes): 18486 (56%)  Free ROM (bytes): 14282 (44%)
+warning: 207	1509	Generated baud rate is 9615 bps (error = 0.16 percent)	jogodaforca.c
+diagnostics: 234	123	Compiled Successfully	jogodaforca.c
+diagnostics: 0	127	All files Compiled in 187 ms	 
+hint: 0	1143	Used RAM (bytes): 488 (32%)  Free RAM (bytes): 1027 (68%)	Used RAM (bytes): 488 (32%)  Free RAM (bytes): 1027 (68%)
+hint: 0	1143	Used ROM (bytes): 18821 (57%)  Free ROM (bytes): 13947 (43%)	Used ROM (bytes): 18821 (57%)  Free ROM (bytes): 13947 (43%)
 diagnostics: 0	125	Project Linked Successfully	jogodaforca.mcppi
-diagnostics: 0	128	Linked in 1078 ms	 
-diagnostics: 0	129	Project 'jogodaforca.mcppi' completed: 1610 ms	 
-diagnostics: 0	103	Finished successfully: 10 out 2012, 20:15:27	jogodaforca.mcppi
+diagnostics: 0	128	Linked in 1109 ms	 
+diagnostics: 0	129	Project 'jogodaforca.mcppi' completed: 1671 ms	 
+diagnostics: 0	103	Finished successfully: 10 out 2012, 21:25:59	jogodaforca.mcppi

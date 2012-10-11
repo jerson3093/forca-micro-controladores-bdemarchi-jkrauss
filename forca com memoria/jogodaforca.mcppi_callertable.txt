@@ -8,6 +8,18 @@ main
 	UART1_Data_Ready
 	UART1_Read
 	zerar
+		write_eeprom
+			Soft_I2C_Start
+				Delay_1us
+				PutZerosToLATSda
+				PutZerosToLATScl
+			Soft_I2C_Write
+				Delay_1us
+				PutZerosToLATScl
+				PutZerosToLATSda
+			Soft_I2C_Stop
+				PutZerosToLATSda
+				Delay_1us
 	lerPalavraNova
 		UART1_Write_Text
 			UART1_Write
@@ -28,40 +40,48 @@ main
 			Soft_I2C_Stop
 				PutZerosToLATSda
 				Delay_1us
-	jogar
-		imprimeEstadoAtual
-			sprintf
-				_doprntf
-					isdigit
-					Mul_16x16_U
-					Compare_Double
-					Equals_Double
-					Div_16x16_S
-						Div_16x16_S_L
-					scale
-						Div_8x8_S
+		jogar
+			strcpy
+			imprimeEstadoAtual
+				sprintf
+					_doprntf
+						isdigit
+						Mul_16x16_U
+						Compare_Double
+						Equals_Double
+						Div_16x16_S
+							Div_16x16_S_L
+						scale
+							Div_8x8_S
+							Mul_32x32_FP
+								RES032
+								SETFOV32
+								SETFUN32
 						Mul_32x32_FP
 							RES032
 							SETFOV32
 							SETFUN32
-					Mul_32x32_FP
-						RES032
-						SETFOV32
-						SETFUN32
-					Div_32x32_FP
-						SETFDZ32
-						RES032
-						SETFOV32
-						SETFUN32
-					Double2Longword
-						SETIOV3224
-					Longword2Double
-						NRM4032
-							SETFUN32
-							FIXSIGN32
-							SETFOV32
+						Div_32x32_FP
+							SETFDZ32
 							RES032
-					Sub_32x32_FP
+							SETFOV32
+							SETFUN32
+						Double2Longword
+							SETIOV3224
+						Longword2Double
+							NRM4032
+								SETFUN32
+								FIXSIGN32
+								SETFOV32
+								RES032
+						Sub_32x32_FP
+							Add_32x32_FP
+								NRM4032
+									SETFUN32
+									FIXSIGN32
+									SETFOV32
+									RES032
+								SETFOV32
 						Add_32x32_FP
 							NRM4032
 								SETFUN32
@@ -69,36 +89,28 @@ main
 								SETFOV32
 								RES032
 							SETFOV32
-					Add_32x32_FP
-						NRM4032
-							SETFUN32
-							FIXSIGN32
-							SETFOV32
-							RES032
-						SETFOV32
-					Div_32x32_U
-					fround
-						Div_8x8_U
-						Mul_32x32_FP
-							RES032
-							SETFOV32
-							SETFUN32
-					Double2Longint
-						SETIOV3224
-			UART1_Write
+						Div_32x32_U
+						fround
+							Div_8x8_U
+							Mul_32x32_FP
+								RES032
+								SETFOV32
+								SETFUN32
+						Double2Longint
+							SETIOV3224
+				UART1_Write
+				UART1_Write_Text
+					UART1_Write
+			UART1_Read_Text
+				UART1_Data_Ready
+				UART1_Read
+			strlen
 			UART1_Write_Text
 				UART1_Write
-		UART1_Read_Text
-			UART1_Data_Ready
-			UART1_Read
-		strlen
-		strcpy
-		UART1_Write_Text
-			UART1_Write
-		strstr
-			strlen
-			strncmp
-			strchr
+			strstr
+				strlen
+				strncmp
+				strchr
 	lerPalavraMemoria
 		UART1_Write_Text
 			UART1_Write
@@ -122,3 +134,74 @@ main
 				PutZerosToLATSda
 				Delay_1us
 		strlen
+		jogar
+			strcpy
+			imprimeEstadoAtual
+				sprintf
+					_doprntf
+						isdigit
+						Mul_16x16_U
+						Compare_Double
+						Equals_Double
+						Div_16x16_S
+							Div_16x16_S_L
+						scale
+							Div_8x8_S
+							Mul_32x32_FP
+								RES032
+								SETFOV32
+								SETFUN32
+						Mul_32x32_FP
+							RES032
+							SETFOV32
+							SETFUN32
+						Div_32x32_FP
+							SETFDZ32
+							RES032
+							SETFOV32
+							SETFUN32
+						Double2Longword
+							SETIOV3224
+						Longword2Double
+							NRM4032
+								SETFUN32
+								FIXSIGN32
+								SETFOV32
+								RES032
+						Sub_32x32_FP
+							Add_32x32_FP
+								NRM4032
+									SETFUN32
+									FIXSIGN32
+									SETFOV32
+									RES032
+								SETFOV32
+						Add_32x32_FP
+							NRM4032
+								SETFUN32
+								FIXSIGN32
+								SETFOV32
+								RES032
+							SETFOV32
+						Div_32x32_U
+						fround
+							Div_8x8_U
+							Mul_32x32_FP
+								RES032
+								SETFOV32
+								SETFUN32
+						Double2Longint
+							SETIOV3224
+				UART1_Write
+				UART1_Write_Text
+					UART1_Write
+			UART1_Read_Text
+				UART1_Data_Ready
+				UART1_Read
+			strlen
+			UART1_Write_Text
+				UART1_Write
+			strstr
+				strlen
+				strncmp
+				strchr
