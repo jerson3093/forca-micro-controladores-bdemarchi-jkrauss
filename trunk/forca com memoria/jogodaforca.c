@@ -30,8 +30,8 @@ void write_eeprom(unsigned char address, unsigned char dado)
 {
   Soft_I2C_Start();               // Issue start signal
   Soft_I2C_Write(0xA0);           // Address eeprom 24C01, write ID
-  Soft_I2C_Write(address);              // Start from address
-  Soft_I2C_Write(dado);               // data
+  Soft_I2C_Write(address);        // Start from address
+  Soft_I2C_Write(dado);           // data
   Soft_I2C_Stop();               // Do it
   delay_ms(16);
 }
@@ -77,61 +77,14 @@ void imprimeEstadoAtual() {
   UART1_Write_Text(enter);
 }
 
-void lerPalavraNova(){
-  UART1_Write_Text("Digite a palavra: ");
-  UART1_Write_Text(enter);
-  UART1_Read_Text(palavra, enter, 20);
-  UART1_Write_Text(enter);
-
-  memoria = qtdPalavrasSalvas*20;
-  
-   for(i=0; i < strlen(palavra); i++, memoria++) {
-    escondida[i] = 95;
-    write_eeprom(memoria,palavra[i]); //guarda na memoria
-   }
-   
-   escondida[strlen(palavra)]=0;
-   
-   //preenche o resto da palavra com espaços
-   for(; i<20; i++, memoria++) {
-      write_eeprom(memoria,' ');
-   }
-   
-   qtdPalavrasSalvas++;
-}
-
-void lerPalavraMemoria() {
-  UART1_Write_Text("Digite o índice da palavra: ");
-  UART1_Write_Text(enter);
-
-       while (UART1_Data_Ready() == 0) {}
-       indiceLeituraMemoria = UART1_Read()-48;
-
-  memoria = indiceLeituraMemoria*20;
-
-  for(i=0;i<20;i++,memoria++) {
-     palavra[i] = read_eeprom(memoria);
-     
-     if(palavra[i] == ' ') {
-       palavra[i]=0;
-       break;
-     }
-  }
-  
-  if(i==20) {
-    palavra[19] = 0;
-  }
-  
-   for(i=0; i < strlen(palavra); i++, memoria++) {
-    escondida[i] = 95;
-   }
-
-   escondida[strlen(palavra)]=0;
-}
-
 void jogar() {
   tentativas = 4;
-  
+
+  strcpy(cabeca," V");
+  strcpy(tronco,"/|\\");
+  strcpy(barriga," |");
+  strcpy(perna,"/ \\");
+
   while (1) {
       encontrou = 0;
       imprimeEstadoAtual();
@@ -164,17 +117,85 @@ void jogar() {
           if(!tentativas) {
                   imprimeEstadoAtual();
                   UART1_Write_Text("GAME OVER");
+                  Delay_ms(2000);
                   break;
           } else if(strstr(escondida,"_") == 0) {
                   imprimeEstadoAtual();
                   UART1_Write_Text("VOCE VENCEU! A PALAVRA ERA ");
                   UART1_Write_Text(palavra);
+                  Delay_ms(2000);
                   break;
           }
     }
 }
 
+
+void lerPalavraNova(){
+  UART1_Write_Text("Digite a palavra: ");
+  UART1_Write_Text(enter);
+  UART1_Read_Text(palavra, enter, 20);
+  UART1_Write_Text(enter);
+
+  memoria = qtdPalavrasSalvas*20;
+  
+   for(i=0; i < strlen(palavra); i++, memoria++) {
+    escondida[i] = 95;
+    write_eeprom(memoria,palavra[i]); //guarda na memoria
+   }
+   
+   escondida[strlen(palavra)]=0;
+   
+   //preenche o resto da palavra com espaços
+   for(; i<20; i++, memoria++) {
+      write_eeprom(memoria,' ');
+   }
+   
+   qtdPalavrasSalvas++;
+   jogar();
+}
+
+void lerPalavraMemoria() {
+
+  if (qtdPalavrasSalvas == 0){
+     UART1_Write_Text(enter);
+     UART1_Write_Text("Sem palavras na memoria!");
+     Delay_ms(1000);
+     UART1_Write_Text(enter);
+     return;
+  }
+  UART1_Write_Text("Digite o indice da palavra: ");
+  UART1_Write_Text(enter);
+
+       while (UART1_Data_Ready() == 0) {}
+       indiceLeituraMemoria = UART1_Read()-48;
+
+  memoria = indiceLeituraMemoria*20;
+
+  for(i=0;i<20;i++,memoria++) {
+     palavra[i] = read_eeprom(memoria);
+     
+     if(palavra[i] == ' ') {
+       palavra[i]=0;
+       break;
+     }
+  }
+  
+  if(i==20) {
+    palavra[19] = 0;
+  }
+  
+   for(i=0; i < strlen(palavra); i++, memoria++) {
+    escondida[i] = 95;
+   }
+
+   escondida[strlen(palavra)]=0;
+   jogar();
+}
+
 void zerar(){
+     for(i=0;i<qtdPalavrasSalvas;i++){
+       write_eeprom(i,' ');
+     }
      qtdPalavrasSalvas = 0;
 }
 
@@ -204,8 +225,8 @@ void main() {
 
         switch(i) {
            case 49: zerar(); break;
-           case 50: lerPalavraNova(); jogar(); break;
-           case 51: lerPalavraMemoria(); jogar(); break;
+           case 50: lerPalavraNova(); break;
+           case 51: lerPalavraMemoria(); break;
            case 52: executar = 0; UART1_Write(12); UART1_Write_Text("FIM");  break;
         }
 
